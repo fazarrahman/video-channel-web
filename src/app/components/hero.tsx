@@ -18,8 +18,8 @@ const Hero = ({ films }: HeroProps) => {
                     <Image src={films[currentIndex].image_thumbnail} alt={films[currentIndex].title} fill style={{ objectFit: 'cover' }} />
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-900 via-40% to-transparent"></div>
                     <div className="absolute top-0 left-12 h-full w-1/3 bg-opacity-50 flex flex-col justify-end p-4">
-                        <h1 className="text-white text-4xl mb-4">{films[currentIndex].title}</h1>
-                        <p className="text-white mb-12">{films[currentIndex].description}</p>
+                        <h1 className="text-white sm:text-xl md:text-4xl mb-4">{films[currentIndex].title}</h1>
+                        <p className="text-white sm:text-sm md:text-base mb-12">{films[currentIndex].description}</p>
                         <div className="flex space-x-2 mt-20 bottom-12">
                             {films.map((_, index) => (
                                 <span

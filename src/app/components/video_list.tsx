@@ -16,7 +16,7 @@ const FilmList = ({ films }: filmProps) => {
 
     return (
         <div className="p-4 mx-5 my-10">
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
                 {films.slice(0, 3).map((film) => (
                     <div key={film.id} className="relative">
                         <Image
@@ -31,7 +31,7 @@ const FilmList = ({ films }: filmProps) => {
                     </div>
                 ))}
             </div>
-            <div className="grid grid-cols-3 gap-6 mt-4">
+            <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 mt-4">
                 {films.slice(3, 6).map((film) => (
                     <div key={film.id} className="relative">
                         <Image

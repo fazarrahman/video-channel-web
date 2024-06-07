@@ -3,12 +3,16 @@ import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import { GetStaticProps } from "next";
 import { Films, GetFilmsResponse } from "./types/films";
+import FilmList from "./components/video_list";
+import Footer from "./components/footer";
 
 export default async function Home() {
   const films = await fetchFilms();
   return (
     <main>
-      <Hero films={films} />
+      <Hero films={films.slice(0, 4)} />
+      <FilmList films={films} />
+      <Footer />
     </main>
   );
 }
